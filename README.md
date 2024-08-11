@@ -30,12 +30,12 @@ local a = nil --no value or invalid value
 ### Numbers
 
 operators
-- \+ addition
-- \- minus
-- \* multiply
-- / divide
-- ^ power
-- % modulus
+- Addition: \+ 
+- Subtraction: \-
+- Multiplication: \* 
+- Division: /
+- Power: ^
+- Modulus: %
 
 ```lua
 local a = 1
@@ -111,7 +111,7 @@ else
 end
 ```
 
-**Comparison Operators**
+### Comparison Operators
 - == equality
 - < less than
 - \> greater than
@@ -136,7 +136,7 @@ end
 
 ```
 
-**Combining Statements**
+### Combining Statements
 ```lua
 local x = 10
 if x == 10 and x < 0 then --both are true
@@ -147,7 +147,7 @@ end
 --result: cat
 ```
 
-**Nested statements**
+### Nested statements
 
 ```lua
 local x = 10
@@ -160,7 +160,7 @@ if x==10 then
   end
 end
 ```
-**Invert Value**
+### Invert Value
 
 you can also invert a value with the **not** keyword
 ```lua
@@ -210,7 +210,7 @@ displayInfo("Billy", 12, "Jupiter")
 ```
 
 ## Scope
-Variables have different scopes. Once the end of the scope is reached the values in that scope are no longer accessable
+Variables have different scopes. Once the end of the scope is reached the values in that scope are no longer accessible
 ```lua
 function foo()
   local a = 10
@@ -228,14 +228,14 @@ end
 print(a) --nil
 ```
 
-**Global Variable**
+### Global Variable
 ```lua
 local _G.myValue = 69
 --doing this can sometimes be bad practice
 ```
 
 ## Loops
-There is a few different ways you can do a loop in lua
+There is a few different ways you can do a loop in Lua
 ```lua
 --while loop
 local i = 0
@@ -257,7 +257,7 @@ print("count is " .. count)
 
 ```
 
-**Infinite Loops**
+### Infinite Loops
 ```lua
 --infinite loop will never end
 local i = 0
@@ -267,7 +267,7 @@ while i >= 0 do
 end
 ```
 
-**Nested Loops**
+### Nested Loops
 ```lua
 local count = 0
 for a=1, 10 do
@@ -294,7 +294,7 @@ for i=1, #colors do
 end
 ```
 
-**Table Manipulation**
+### Table Manipulation
 ```lua
 --insert
 local colors = { "red", "green", "blue" }
@@ -324,7 +324,7 @@ end
 ```
 
 
-**2 Dimensional Table**
+### 2 Dimensional Table
 ```lua
 --tables within tables
 local data = {
@@ -339,7 +339,7 @@ end
 ```
 
 
-**Key Tables**
+### Key Tables
 
 2 dimensional tables are not suited to data with different types, instead uses keys for tables
 ```lua
@@ -366,7 +366,7 @@ teams["teamA"] = nil
 ```
 
 
-**Returning a Table from a Function**
+### Returning a Table from a Function
 
 This can be used to return multiple values from a functions
 ```lua
