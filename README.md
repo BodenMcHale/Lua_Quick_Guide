@@ -1,20 +1,21 @@
 # Lua 5.3 - Quick Guide
 
-## Printing
+## Print Statements
+
 ```lua
-print("Hello World")
+print("Hello, User")
 ```
 
 ## Comments
+
 ```lua
---this is a comment
-print("hello") --this is another comment
--- the next line will not do anything because it is commented out
---print("world") 
+-- This is an example of a comment in Lua
+print("Hello, User") -- Example 2, an inline comment
+-- The following line of code will not be performed due to it being commented out
+--print("Hello, World") 
 ```
 
 ## Variables
-
 
 ```lua
 -- Different types
@@ -24,7 +25,7 @@ local isAlive = false -- boolean
 local a = nil --no value or invalid value
 ```
 
-**Numbers**
+### Numbers
 
 operators
 - \+ addition
@@ -35,7 +36,6 @@ operators
 - % modulus
 
 ```lua
--- examples
 local a = 1
 local b = 2
 local c = a + b
@@ -44,14 +44,15 @@ print(c) -- 3
 local d = b - a
 print(d) -- 1
 
-local x =  1 * 3 * 4 -- 12
-print(x)
+local e =  1 * 3 * 4
+print(e) -- 12
 
-local y = (1+3) * 2 -- 8
-print(y)
+local f = (1+3) * 2
+print(f) -- 8
 
 
-print(10/2) -- 5
+print(10//2) -- 5, two forward slashes performs the integer division
+print(10/2) -- 5.0, one forward slash defaults to a float division
 print (2^2) -- 4
 print(5%2) -- 1
 
@@ -59,13 +60,14 @@ print(-b) -- -2
 ```
 
 ```lua
--- increment
+-- Incrementing
 local level = 1
 level = level + 1
 print(level) -- 2
 ```
 
-**Strings**
+### Strings
+
 ```lua
 -- concatenate strings
 local phrase = "My name is "
@@ -78,7 +80,8 @@ local name = "Billy"
 print(name .. " is " .. age .. " years old")
 ````
 
-**Boolean**
+### Boolean
+
 ```lua
 local isAlive = true
 print(isAlive) --true
@@ -87,8 +90,9 @@ print(isAlive) --false
 ```
 
 ## Conditional Statements
+
 ```lua
---number comparisions
+--number comparisons
 local age = 10
 if age < 18 then
   print("over 18") --this will not be executed
