@@ -21,10 +21,10 @@ print("Hello, User") -- Example 2, an inline comment
 
 ```lua
 -- Types
-local x = 10 -- number
-local name = "john doe" -- string
-local isAlive = false -- boolean
-local a = nil --no value or invalid value
+local x = 10 -- Number
+local name = "john doe" -- String
+local isAlive = false -- Boolean
+local a = nil -- No value / Invalid
 ```
 
 ### Numbers
@@ -112,12 +112,13 @@ end
 ```
 
 ### Comparison Operators
-- == equality
-- < less than
-- \> greater than
-- <= less than or equal to
-- \>= greater than or equal to
-- ~= inequality
+
+- Equal to: == 
+- Less than: < 
+- Greater than: \> 
+- Less than or equal to: <= 
+- Greater than or equal to: \>= 
+- Not equal to: ~=
 
 ```lua
 --boolean comparision
@@ -163,6 +164,7 @@ end
 ### Invert Value
 
 you can also invert a value with the **not** keyword
+
 ```lua
 local x = 10
 if not x == 10 then
@@ -171,6 +173,7 @@ end
 ```
 
 ## Functions
+
 ```lua
 function printTax(price)
   local tax = price * 0.21
@@ -210,7 +213,9 @@ displayInfo("Billy", 12, "Jupiter")
 ```
 
 ## Scope
+
 Variables have different scopes. Once the end of the scope is reached the values in that scope are no longer accessible
+
 ```lua
 function foo()
   local a = 10
@@ -229,13 +234,16 @@ print(a) --nil
 ```
 
 ### Global Variable
+
 ```lua
 local _G.myValue = 69
 --doing this can sometimes be bad practice
 ```
 
 ## Loops
+
 There is a few different ways you can do a loop in Lua
+
 ```lua
 --while loop
 local i = 0
