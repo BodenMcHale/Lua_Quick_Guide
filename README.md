@@ -1,6 +1,6 @@
 # Lua 5.3 - Quick Guide
 
-Please refer to my video (Lua Crash Course - A quick overview with a guide)[https://www.youtube.com/watch?v=Q10xtMnDHaI]
+Please refer to my video: [Lua Crash Course - A quick overview with a guide](https://www.youtube.com/watch?v=Q10xtMnDHaI)
 
 ## Print Statements
 
