@@ -1,5 +1,7 @@
 # Lua 5.3 - Quick Guide
 
+Please refer to my video (Lua Crash Course - A quick overview with a guide)[https://www.youtube.com/watch?v=Q10xtMnDHaI]
+
 ## Print Statements
 
 ```lua
@@ -18,9 +20,9 @@ print("Hello, User") -- Example 2, an inline comment
 ## Variables
 
 ```lua
--- Different types
-local x = 10 --number
-local name = "john doe" --string
+-- Types
+local x = 10 -- number
+local name = "john doe" -- string
 local isAlive = false -- boolean
 local a = nil --no value or invalid value
 ```
