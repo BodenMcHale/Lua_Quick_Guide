@@ -5,26 +5,26 @@ Please refer to my video: [Lua Crash Course - A quick overview with a guide](htt
 ## Print Statements
 
 ```lua
-print("Hello, User")
+print("Hello, developer")
 ```
 
 ## Comments
 
 ```lua
 -- This is an example of a comment in Lua
-print("Hello, User") -- Example 2, an inline comment
--- The following line of code will not be performed due to it being commented out
---print("Hello, World") 
+print("Hello, developer") -- An inline comment
+-- The following line of code will not be executed due to it being commented out
+--print("Hello, World") -- A comment still functions the same when you comment out the line of code it's on
 ```
 
 ## Variables
 
 ```lua
 -- Types
-local x = 10 -- Number
-local name = "john doe" -- String
-local isAlive = false -- Boolean
-local a = nil -- No value / Invalid
+local pizzas_to_order = 10 -- Number
+local first_name = "Boden" -- String
+local is_alive = false -- Boolean
+local empty_variable = nil -- No value / Invalid
 ```
 
 ### Numbers
@@ -41,45 +41,45 @@ operators
 local a = 1
 local b = 2
 local c = a + b
-print(c) -- 3
+print(c) -- "3"
 
 local d = b - a
-print(d) -- 1
+print(d) -- "1"
 
 local e =  1 * 3 * 4
-print(e) -- 12
+print(e) -- "12"
 
 local f = (1+3) * 2
-print(f) -- 8
+print(f) -- "8"
 
 
-print(10//2) -- 5, two forward slashes performs the integer division
-print(10/2) -- 5.0, one forward slash defaults to a float division
-print (2^2) -- 4
-print(5%2) -- 1
+print(10//2) -- "5", two forward slashes performs the integer division
+print(10/2) -- "5.0", one forward slash defaults to a float division
+print (2^2) -- "4"
+print(5%2) -- "1"
 
-print(-b) -- -2
+print(-b) -- "-2"
 ```
 
 ```lua
 -- Incrementing
 local level = 1
 level = level + 1
-print(level) -- 2
+print(level) -- "2"
 ```
 
 ### Strings
 
 ```lua
--- concatenate strings
+-- Concatenate strings
 local phrase = "My name is "
-local name = "John Doe"
-print(phase .. name) --My name is John Doe
+local name = "Boden"
+print(phase .. name) -- "My name is Boden"
 
--- strings and numbers
-local age = 12
-local name = "Billy"
-print(name .. " is " .. age .. " years old")
+-- Strings with numbers
+local amount_of_creatures = 21
+local creature = "toads"
+print("There are " .. amount_of_creatures .. creature .. " in the swamp") -- "There are 21 toads in the swamp" 
 ````
 
 ### Boolean
