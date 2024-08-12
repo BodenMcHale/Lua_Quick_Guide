@@ -4,11 +4,32 @@ Please refer to my video: [Lua Crash Course - A quick overview with a guide](htt
 
 ## Table of Contents
 - [Lua - Quick Guide](#Lua-53-quick-guide)
-  
-  -[ToC](#table-of-contents)
+  - [ToC](#table-of-contents)
   - [Print Statements](##print-statements)
+  - [Comments](#comments)
   - [Variables](#variables)
-  
+    - [Numbers](#numbers)
+    - [Strings](#strings)
+    - [Boolean](#boolean)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+  - [Variables](#variables)
+    - 
 ## Print Statements
 
 Print statements are used to output text or values to the console. They are essential for debugging and displaying information to the developer.
@@ -381,19 +402,6 @@ for index = 1, #colors do
   print(colors[index]) -- Output: green, blue
 end
 ```
-
-```lua
---remove 
-local colors = { "red", "green", "blue" }
-
-table.remove(colors, 1)
-
-for index = 1, #colors do
-  print(colors[index])
-end
--- "green", "blue"
-```
-
 
 ### Two (2) Dimensional Table
 
