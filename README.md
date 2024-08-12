@@ -4,11 +4,15 @@ Please refer to my video: [Lua Crash Course - A quick overview with a guide](htt
 
 ## Print Statements
 
+Print statements are used to output text or values to the console. They are essential for debugging and displaying information to the user.
+
 ```lua
 print("Hello, developer")
 ```
 
 ## Comments
+
+Comments are used to add explanations or notes within the code. They are ignored by the Lua interpreter and are solely for the benefit of programmers reading the code.
 
 ```lua
 -- This is an example of a comment in Lua
@@ -19,17 +23,20 @@ print("Hello, developer") -- An inline comment
 
 ## Variables
 
+Variables are containers for storing data values. In Lua, variables can hold different types of data.
+
 ```lua
 -- Types
-local pizzas_to_order = 10 -- Number
-local first_name = "Boden" -- String
-local is_alive = false -- Boolean
-local empty_variable = nil -- No value / Invalid
+local pizzas_to_order = 10 -- Number: Stores numeric values
+local first_name = "Boden" -- String: Stores text
+local is_alive = false -- Boolean: Stores true or false
+local empty_variable = nil -- Nil: Represents no value or invalid value
 ```
 
 ### Numbers
 
-operators
+Numbers in Lua can be integers or floating-point values. Lua supports various arithmetic operations.
+
 - Addition: \+ 
 - Subtraction: \-
 - Multiplication: \* 
@@ -41,58 +48,61 @@ operators
 local a = 1
 local b = 2
 local c = a + b
-print(c) -- "3"
+print(c) -- Output: 3
 
 local d = b - a
-print(d) -- "1"
+print(d) -- Output: 1
 
-local e =  1 * 3 * 4
-print(e) -- "12"
+local e = 1 * 3 * 4
+print(e) -- Output: 12
 
 local f = (1+3) * 2
-print(f) -- "8"
+print(f) -- Output: 8
 
+print(10//2) -- Output: 5 (integer division)
+print(10/2) -- Output: 5.0 (float division)
+print(2^2) -- Output: 4 (exponentiation)
+print(5%2) -- Output: 1 (modulus)
 
-print(10//2) -- "5", two forward slashes performs the integer division
-print(10/2) -- "5.0", one forward slash defaults to a float division
-print (2^2) -- "4"
-print(5%2) -- "1"
+print(-b) -- Output: -2 (negation)
 
-print(-b) -- "-2"
-```
-
-```lua
 -- Incrementing
 local level = 1
 level = level + 1
-print(level) -- "2"
+print(level) -- Output: 2
 ```
 
 ### Strings
 
+Strings are sequences of characters used to represent text. Lua provides operations for manipulating strings.
+
 ```lua
--- Concatenate strings
+-- Concatenate strings using the .. operator
 local phrase = "My name is "
 local name = "Boden"
-print(phase .. name) -- "My name is Boden"
+print(phrase .. name) -- Output: "My name is Boden"
 
--- Strings with numbers
+-- Combining strings with numbers
 local amount_of_creatures = 21
 local creature = "toads"
-print("There are " .. amount_of_creatures .. creature .. " in the swamp") -- "There are 21 toads in the swamp" 
+print("There are " .. amount_of_creatures .. " " .. creature .. " in the swamp") -- Output: "There are 21 toads in the swamp"
 ````
 
 ### Boolean
 
+Boolean values represent true or false conditions. They are used in logical operations and control structures.
+
 ```lua
 local is_conscious = true
-print(is_conscious) -- Returns true
+print(is_conscious) -- Output: true
 
 is_conscious = false
-print(is_conscious) -- Returns false
+print(is_conscious) -- Output: false
 ```
 
 ## Conditional Statements
+
+Conditional statements allow the program to make decisions based on certain conditions.
 
 ```lua
 -- Number comparisons
@@ -115,6 +125,8 @@ end
 
 ### Comparison Operators
 
+Comparison operators are used to compare values.
+
 - Equal to: == 
 - Less than: < 
 - Greater than: \> 
@@ -123,207 +135,225 @@ end
 - Not equal to: ~=
 
 ```lua
---boolean comparision
+-- Boolean comparison
 local isAlive = true
 if isAlive then
     print("dog")
 end
 
---string comparisions
+-- String comparisons
 local name = "billy"
-if name == "Billy" then --false
+if name == "Billy" then -- This condition is false
   print("Billy")
-elseif name == "billy" then --true
+elseif name == "billy" then -- This condition is true
   print("billy")
 end
-
 ```
 
 ### Combining Statements
+
+Logical operators can be used to combine multiple conditions.
+
 ```lua
 local x = 10
-if x == 10 and x < 0 then --both are true
+if x == 10 and x < 0 then -- Both conditions must be true (which they aren't)
   print("dog")
-elseif x == 100 or x < 0 then --1 or more are true
+elseif x == 100 or x < 0 then -- At least one condition must be true
   print("cat")
 end
---result: cat
+-- Result: No output, as neither condition is true
 ```
 
 ### Nested statements
 
+Conditional statements can be nested within each other.
+
 ```lua
 local x = 10
 local isAlive = true
-if x==10 then
+if x == 10 then
   if isAlive == true then
     print("dog")
   else
     print("cat")
   end
 end
+-- Output: "dog"
 ```
+
 ### Invert Value
 
-you can also invert a value with the **not** keyword
+The **not** keyword can be used to invert a boolean value:
 
 ```lua
 local x = 10
-if not x == 10 then
+if not (x == 10) then -- This is equivalent to x ~= 10
   print("here")
 end
+-- No output, as the condition is false
 ```
 
 ## Functions
 
+Functions are reusable blocks of code that perform specific tasks.
+
 ```lua
+-- Function to calculate and print tax
 function printTax(price)
   local tax = price * 0.21
   print("tax:" .. tax)
 end
 
-printTax(200)
-```
+printTax(200) -- Output: tax:42
 
-```lua
---function that returns a value
+-- Function that returns a value
 function calculateTax(price)
   return price * 0.21
 end
 
 local result = calculateTax(100)
-print(result)
+print(result) -- Output: 21
 
---reusing the function but this time using variables
+-- Reusing the function with variables
 local bread = 130
 local milk = 110
 
-local breadTax = calculateTax(bread) --27.3
-local milkTax = calculateTax(milk) --23.1
+local breadTax = calculateTax(bread) -- 27.3
+local milkTax = calculateTax(milk) -- 23.1
 
-print("Bread Tax = " .. breadTax) 
-print("Milk Tax = " .. milkTax) 
-```
+print("Bread Tax = " .. breadTax)
+print("Milk Tax = " .. milkTax)
 
-```lua
---multiple parameters
+-- Function with multiple parameters
 function displayInfo(name, age, country)
   print(name .. " is " .. age .. " years old and is from " .. country)
 end
 
-displayInfo("Billy", 12, "Jupiter")
+displayInfo("Billy", 12, "Jupiter") -- Output: Billy is 12 years old and is from Jupiter
 ```
 
 ## Scope
 
-Variables have different scopes. Once the end of the scope is reached the values in that scope are no longer accessible
+Scope refers to the visibility and lifetime of variables within a program.
 
 ```lua
+-- Local scope example
 function foo()
   local a = 10
 end
 
-print(a) --nil
-```
+print(a) -- Output: nil (a is not accessible outside the function)
 
-```lua
+-- Block scope example
 local isAlive = true
 if isAlive then
   local a = 10
 end
 
-print(a) --nil
+print(a) -- Output: nil (a is not accessible outside the if block)
+
+-- Global variable example
+
 ```
 
 ### Global Variable
 
 ```lua
-local _G.myValue = 69
---doing this can sometimes be bad practice
+_G.myValue = 69 -- This creates a global variable
+-- Note: Using global variables can sometimes be considered bad practice
 ```
 
 ## Loops
 
-There is a few different ways you can do a loop in Lua
+Loops are used to repeat a block of code multiple times.
 
 ```lua
---while loop
+-- While loop
 local i = 0
 local count = 0
 
 while i <= 10 do
   count = count + 1
+  i = i + 1 -- This line was missing in the original code
 end
 
-print("count is " .. count) --count is 7
+print("count is " .. count) -- Output: count is 11
 
-
---for loop
+-- For loop
 count = 0
-for i=1, 5 do
+for i = 1, 5 do
   count = count + 1
 end
-print("count is " .. count)
-
+print("count is " .. count) -- Output: count is 5
 ```
 
 ### Infinite Loops
 
+An infinite loop continues indefinitely unless explicitly broken (use with caution).
+
 ```lua
---infinite loop will never end
 local i = 0
 while i >= 0 do
  i = i + 1
  print(i)
 end
+-- This loop will run forever, printing increasing numbers
 ```
 
 ### Nested Loops
 
+Loops can be nested within each other.
+
 ```lua
 local count = 0
-for a=1, 10 do
-  for b=1, 10 do
+for a = 1, 10 do
+  for b = 1, 10 do
     count = count + 1
   end
 end
-print(count) -- 100
+print(count) -- Output: 100
 ```
 
 
 ## Tables
 
+Tables are the primary data structure in Lua. They can be used to create arrays, dictionaries, and more complex data structures.
+
 ```lua
---basic table
+-- Basic table (array-like)
 local colors = { "red", "green", "blue" }
 
-print(colors[1]) --red
-print(colors[2]) --green
-print(colors[3]) --blue
+print(colors[1]) -- Output: red
+print(colors[2]) -- Output: green
+print(colors[3]) -- Output: blue
 
---using a loop to iterate though your table
-for i=1, #colors do
+-- Using a loop to iterate through your table
+for i = 1, #colors do
   print(colors[i])
 end
 ```
 
 ### Table Manipulation
 ```lua
---insert
+-- Insert at the end of the table
 local colors = { "red", "green", "blue" }
 table.insert(colors, "orange")
-local index = #colors --4 (this is the last index in the table)
-print(colors[index]) --orange
-```
+local index = #colors -- 4 (this is the last index in the table)
+print(colors[index]) -- Output: orange
 
-```lua
---insert at index
+-- Insert at a specific index
 local colors = { "red", "green", "blue" }
 table.insert(colors, 2, "pink")
-for i=1, #colors do
-  print(colors[i])
+for i = 1, #colors do
+  print(colors[i]) -- Output: red, pink, green, blue
 end
---red, pink, green, blue
+
+-- Remove from a specific index
+local colors = { "red", "green", "blue" }
+table.remove(colors, 1)
+for i = 1, #colors do
+  print(colors[i]) -- Output: green, blue
+end
 ```
 
 ```lua
@@ -337,16 +367,19 @@ end
 ```
 
 
-### 2 Dimensional Table
+### Two (2) Dimensional Table
+
+Tables can contain other tables, creating multi-dimensional structures.
+
 ```lua
---tables within tables
+-- Tables within tables
 local data = {
   { "billy", 12 },
   { "john", 20 },
   { "andy", 65 }
 }
 
-for a=1, #data do
+for a = 1, #data do
   print(data[a][1] .. " is " .. data[a][2] .. " years old")
 end
 ```
@@ -354,7 +387,7 @@ end
 
 ### Key Tables
 
-2 dimensional tables are not suited to data with different types, instead uses keys for tables
+Tables can use keys instead of numeric indices, creating dictionary-like structures.
 
 ```lua
 local teams = {
@@ -362,27 +395,23 @@ local teams = {
     ["teamB"] = 15
 }
 
-print(teams["teamA"]) -- 12
+print(teams["teamA"]) -- Output: 12
 
-for key,value in pairs(teams) do
+for key, value in pairs(teams) do
   print(key .. ":" .. value)
 end
-```
 
-```lua
---insert into key table
+-- Insert into key table
 teams["teamC"] = 1
-```
 
-```lua
---remove key from table
+-- Remove key from table
 teams["teamA"] = nil
 ```
 
 
 ### Returning a Table from a Function
 
-This can be used to return multiple values from a functions
+Functions can return tables, allowing for multiple return values.
 
 ```lua
 function getTeamScores()
@@ -390,73 +419,62 @@ function getTeamScores()
     ["teamA"] = 12,
     ["teamB"] = 15
   }
+
   return scores
 end
 
 local scores = getTeamScores()
 local total = 0
+
 for key, val in pairs(scores) do
-  total += val
+  total = total + val
 end
+
 print("Total score of all teams:" .. total)
 ```
 
 
 ## Math
 
-The math class has a number of functions for dealing with numbers. You may not need them but here is some of the more useful one functions:
+Lua provides a math library with various mathematical functions.
 
 More: [Wiki](http://lua-users.org/wiki/MathLibraryTutorial)
+```lua
+-- Absolute value
+local x = -10
+print(math.abs(x)) -- Output: 10
 
-* abs (absolute value)
-  ```lua
-  local x = -10
-  print(math.abs(x)) --result: 10
-  local a = 10
-  print(math.abs(a)) --result: 10
-  ```
-* ceil (round up decimal value)
-  ```lua
-  local x = 1.2
-  print(math.ceil(x)) --result: 2
-  ```
-* deg (Convert value from radians to degrees)
-  ```lua
-  print(math.deg(math.pi)) -- result: 180
-  ```
-* floor (round down decimal value)
-  ```lua
-  local x = 1.2
-  print(math.floor(x)) --result: 1
-  ```
-* pi (constant value of pi)
-  ```lua
-  print(math.pi) --3.1415926535898
-  3.1415926535898
-  ```
-* rad (Convert value from degrees to radians)
-  ```lua
-  print(math.rad(180)) --result: 3.1415926535898
-  ```
-* random (random number generation)
-  ```lua
-  --random value between 0 tand 1
-  print(math.random()) --result: 0.0012512588885159
+-- Ceiling (round up)
+local x = 1.2
+print(math.ceil(x)) -- Output: 2
 
-  --random integer value from 1 to 100 (both inclusive)
-  print(math.random(100)) --result: 20
+-- Convert radians to degrees
+print(math.deg(math.pi)) -- Output: 180
 
-  --random integer value from 20 to 100 (both inclusive)
-  print(math.random(20, 100)) --result: 54
-  ```
-* sqrt (Square root of a number)
-  ```lua
-  print(math.sqrt(100)) --result: 10
-  ```
+-- Floor (round down)
+local x = 1.2
+print(math.floor(x)) -- Output: 1
+
+-- Pi constant
+print(math.pi) -- Output: 3.1415926535898
+
+-- Convert degrees to radians
+print(math.rad(180)) -- Output: 3.1415926535898
+
+-- Random number generation
+print(math.random()) -- Random value between 0 and 1
+print(math.random(100)) -- Random integer from 1 to 100
+print(math.random(20, 100)) -- Random integer from 20 to 100
+
+-- Square root
+print(math.sqrt(100)) -- Output: 10
+```
 
 ## Modules
 
-Include code other files
+Modules allow you to organize and reuse code across multiple files.
+
 ```lua
+-- To include code from another file:
 require("otherfile")
 ```
