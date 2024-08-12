@@ -3,7 +3,7 @@
 Please refer to my video: [Lua Crash Course - A quick overview with a guide](https://www.youtube.com/watch?v=Q10xtMnDHaI)
 
 ## Table of Contents
-- [Lua - Quick Guide](#Lua-5-3---quick-guide)
+- [Lua - Quick Guide](#Lua-53-quick-guide)
   -[ToC](#table-of-contents)
   - [Print Statements](##print-statements)
   - [Variables](#variables)
