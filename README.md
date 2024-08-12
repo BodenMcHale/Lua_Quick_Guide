@@ -2,8 +2,7 @@
 
 Please refer to my video: [Lua Crash Course - A quick overview with a guide](https://www.youtube.com/watch?v=Q10xtMnDHaI)
 
-[Lua Reference Manual](https://www.lua.org/manual/5.3/)
-[Lua Users Wiki](http://lua-users.org/wiki/)
+Helpful resources: [Lua Reference Manual](https://www.lua.org/manual/5.3/) / [Lua Users Wiki](http://lua-users.org/wiki/)
 
 ## Table of Contents
 - [Lua - Quick Guide](#lua-53---quick-guide)
