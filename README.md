@@ -2,6 +2,9 @@
 
 Please refer to my video: [Lua Crash Course - A quick overview with a guide](https://www.youtube.com/watch?v=Q10xtMnDHaI)
 
+[Lua Reference Manual](https://www.lua.org/manual/5.3/)
+[Lua Users Wiki](http://lua-users.org/wiki/)
+
 ## Table of Contents
 - [Lua - Quick Guide](#lua-53---quick-guide)
   - [ToC](#table-of-contents)
@@ -474,7 +477,7 @@ print("Total score of all teams:" .. total)
 
 Lua provides a math library with various mathematical functions.
 
-[User Wiki](http://lua-users.org/wiki/MathLibraryTutorial) / [Lua Documentation](https://www.lua.org/manual/5.3/manual.html#6.7)
+[Users Wiki](http://lua-users.org/wiki/MathLibraryTutorial) / [Lua Documentation](https://www.lua.org/manual/5.3/manual.html#6.7)
 
 ```lua
 -- Absolute value
