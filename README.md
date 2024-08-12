@@ -85,29 +85,31 @@ print("There are " .. amount_of_creatures .. creature .. " in the swamp") -- "Th
 ### Boolean
 
 ```lua
-local isAlive = true
-print(isAlive) --true
-isAlive = false
-print(isAlive) --false
+local is_conscious = true
+print(is_conscious) -- Returns true
+
+is_conscious = false
+print(is_conscious) -- Returns false
 ```
 
 ## Conditional Statements
 
 ```lua
---number comparisons
-local age = 10
+-- Number comparisons
+local age = 16
+
+-- if statement for comparison
 if age < 18 then
-  print("over 18") --this will not be executed
+  print("The age is under 18")
 end
 
---elseif and else
-age = 20
+-- elseif and else comparisons
 if age > 18 then
-  print("dog")
+  print("The age is over 18")
 elseif age == 18 then
-  print("cat")
+  print("The age is exactly 18")
 else
-  print("mouse")
+  print("The age is under 18")
 end
 ```
 
