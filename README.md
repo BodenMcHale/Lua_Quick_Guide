@@ -268,6 +268,7 @@ print("count is " .. count)
 ```
 
 ### Infinite Loops
+
 ```lua
 --infinite loop will never end
 local i = 0
@@ -278,6 +279,7 @@ end
 ```
 
 ### Nested Loops
+
 ```lua
 local count = 0
 for a=1, 10 do
@@ -290,6 +292,7 @@ print(count) -- 100
 
 
 ## Tables
+
 ```lua
 --basic table
 local colors = { "red", "green", "blue" }
@@ -352,6 +355,7 @@ end
 ### Key Tables
 
 2 dimensional tables are not suited to data with different types, instead uses keys for tables
+
 ```lua
 local teams = {
     ["teamA"] = 12,
@@ -379,6 +383,7 @@ teams["teamA"] = nil
 ### Returning a Table from a Function
 
 This can be used to return multiple values from a functions
+
 ```lua
 function getTeamScores()
   local scores = {
@@ -398,6 +403,7 @@ print("Total score of all teams:" .. total)
 
 
 ## Math
+
 The math class has a number of functions for dealing with numbers. You may not need them but here is some of the more useful one functions:
 
 More: [Wiki](http://lua-users.org/wiki/MathLibraryTutorial)
