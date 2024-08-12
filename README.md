@@ -474,7 +474,8 @@ print("Total score of all teams:" .. total)
 
 Lua provides a math library with various mathematical functions.
 
-More: [Wiki](http://lua-users.org/wiki/MathLibraryTutorial)
+[User Wiki](http://lua-users.org/wiki/MathLibraryTutorial) / [Lua Documentation](https://www.lua.org/manual/5.3/manual.html#6.7)
+
 ```lua
 -- Absolute value
 local x = -10
