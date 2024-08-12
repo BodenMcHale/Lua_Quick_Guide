@@ -137,12 +137,14 @@ Comparison operators are used to compare values.
 ```lua
 -- Boolean comparison
 local isAlive = true
+
 if isAlive then
     print("dog")
 end
 
 -- String comparisons
 local name = "billy"
+
 if name == "Billy" then -- This condition is false
   print("Billy")
 elseif name == "billy" then -- This condition is true
@@ -156,6 +158,7 @@ Logical operators can be used to combine multiple conditions.
 
 ```lua
 local x = 10
+
 if x == 10 and x < 0 then -- Both conditions must be true (which they aren't)
   print("dog")
 elseif x == 100 or x < 0 then -- At least one condition must be true
@@ -171,6 +174,7 @@ Conditional statements can be nested within each other.
 ```lua
 local x = 10
 local isAlive = true
+
 if x == 10 then
   if isAlive == true then
     print("dog")
@@ -187,7 +191,12 @@ The **not** keyword can be used to invert a boolean value:
 
 ```lua
 local x = 10
+
 if not (x == 10) then -- This is equivalent to x ~= 10
+  print("here")
+end
+
+if x ~= 10 then -- This is equivalent to x ~= 10
   print("here")
 end
 -- No output, as the condition is false
@@ -260,7 +269,6 @@ print(a) -- Output: nil (a is not accessible outside the if block)
 
 ```lua
 _G.myValue = 69 -- This creates a global variable
--- Note: Using global variables can sometimes be considered bad practice
 ```
 
 ## Loops
@@ -269,19 +277,20 @@ Loops are used to repeat a block of code multiple times.
 
 ```lua
 -- While loop
-local i = 0
+local index = 0
 local count = 0
 
-while i <= 10 do
+while index <= 10 do
   count = count + 1
-  i = i + 1 -- This line was missing in the original code
+  index = index + 1 -- This line was missing in the original code
 end
 
 print("count is " .. count) -- Output: count is 11
 
 -- For loop
 count = 0
-for i = 1, 5 do
+
+for index = 1, 5 do
   count = count + 1
 end
 print("count is " .. count) -- Output: count is 5
@@ -292,10 +301,11 @@ print("count is " .. count) -- Output: count is 5
 An infinite loop continues indefinitely unless explicitly broken (use with caution).
 
 ```lua
-local i = 0
-while i >= 0 do
- i = i + 1
- print(i)
+local index = 0
+
+while index >= 0 do
+ index = index + 1
+ print(index)
 end
 -- This loop will run forever, printing increasing numbers
 ```
@@ -306,11 +316,13 @@ Loops can be nested within each other.
 
 ```lua
 local count = 0
-for a = 1, 10 do
-  for b = 1, 10 do
+
+for index_one = 1, 10 do
+  for index_two = 1, 10 do
     count = count + 1
   end
 end
+
 print(count) -- Output: 100
 ```
 
@@ -328,8 +340,8 @@ print(colors[2]) -- Output: green
 print(colors[3]) -- Output: blue
 
 -- Using a loop to iterate through your table
-for i = 1, #colors do
-  print(colors[i])
+for index = 1, #colors do
+  print(colors[index])
 end
 ```
 
@@ -337,31 +349,40 @@ end
 ```lua
 -- Insert at the end of the table
 local colors = { "red", "green", "blue" }
+
 table.insert(colors, "orange")
+
 local index = #colors -- 4 (this is the last index in the table)
+
 print(colors[index]) -- Output: orange
 
 -- Insert at a specific index
 local colors = { "red", "green", "blue" }
+
 table.insert(colors, 2, "pink")
-for i = 1, #colors do
-  print(colors[i]) -- Output: red, pink, green, blue
+
+for index = 1, #colors do
+  print(colors[index]) -- Output: red, pink, green, blue
 end
 
 -- Remove from a specific index
 local colors = { "red", "green", "blue" }
+
 table.remove(colors, 1)
-for i = 1, #colors do
-  print(colors[i]) -- Output: green, blue
+
+for index = 1, #colors do
+  print(colors[index]) -- Output: green, blue
 end
 ```
 
 ```lua
 --remove 
 local colors = { "red", "green", "blue" }
+
 table.remove(colors, 1)
-for i=1, #colors do
-  print(colors[i])
+
+for index = 1, #colors do
+  print(colors[index])
 end
 -- "green", "blue"
 ```
@@ -379,8 +400,8 @@ local data = {
   { "andy", 65 }
 }
 
-for a = 1, #data do
-  print(data[a][1] .. " is " .. data[a][2] .. " years old")
+for index = 1, #data do
+  print(data[index][1] .. " is " .. data[index][2] .. " years old")
 end
 ```
 
@@ -391,21 +412,21 @@ Tables can use keys instead of numeric indices, creating dictionary-like structu
 
 ```lua
 local teams = {
-    ["teamA"] = 12,
-    ["teamB"] = 15
+    ["team_a"] = 12,
+    ["team_b"] = 15
 }
 
-print(teams["teamA"]) -- Output: 12
+print(teams["team_a"]) -- Output: 12
 
 for key, value in pairs(teams) do
   print(key .. ":" .. value)
 end
 
 -- Insert into key table
-teams["teamC"] = 1
+teams["team_c"] = 1
 
 -- Remove key from table
-teams["teamA"] = nil
+teams["team_a"] = nil
 ```
 
 
@@ -414,7 +435,7 @@ teams["teamA"] = nil
 Functions can return tables, allowing for multiple return values.
 
 ```lua
-function getTeamScores()
+function get_team_scores()
   local scores = {
     ["teamA"] = 12,
     ["teamB"] = 15
@@ -423,11 +444,11 @@ function getTeamScores()
   return scores
 end
 
-local scores = getTeamScores()
+local scores = get_team_scores()
 local total = 0
 
-for key, val in pairs(scores) do
-  total = total + val
+for key, value in pairs(scores) do
+  total = total + value
 end
 
 print("Total score of all teams:" .. total)
@@ -475,6 +496,6 @@ print(math.sqrt(100)) -- Output: 10
 Modules allow you to organize and reuse code across multiple files.
 
 ```lua
--- To include code from another file:
-require("otherfile")
+-- To include code from another file
+require("another_file")
 ```
