@@ -11,25 +11,25 @@ Please refer to my video: [Lua Crash Course - A quick overview with a guide](htt
     - [Numbers](#numbers)
     - [Strings](#strings)
     - [Boolean](#boolean)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-  - [Variables](#variables)
-    - 
+  - [Conditional Statements](#conditional-statements)
+    - [Comparison Operators](#comparison-operators)
+    - [Combining Statements](#combining-statements)
+    - [Nested Statements](#nested-statements)
+    - [Invert Values](#invert-values)
+  - [Functions](#functions)
+  - [Scope](#scope)
+    - [Global Variables](#global-variables)
+  - [Loops](#loops)
+    - [Infinite Loops](#infinite-loops)
+    - [Nested Loops](#nested-loops)
+  - [Tables](#tables)
+    - [Table Manipulation](#table-manipulation)
+    - [Two Dimensional Tables](#two-dimensional-tables)
+    - [Key Tables](#key-tables)
+    - [Returning a Table from a Function](#returning-a-table-from-a-function)
+  - [Math](#math)
+  - [Modules](#modules)
+
 ## Print Statements
 
 Print statements are used to output text or values to the console. They are essential for debugging and displaying information to the developer.
@@ -213,7 +213,7 @@ end
 -- Output: "dog"
 ```
 
-### Invert Value
+### Invert Values
 
 The **not** keyword can be used to invert a boolean value:
 
@@ -293,7 +293,7 @@ print(a) -- Output: nil (a is not accessible outside the if block)
 
 ```
 
-### Global Variable
+### Global Variables
 
 ```lua
 _G.myValue = 69 -- This creates a global variable
@@ -403,7 +403,7 @@ for index = 1, #colors do
 end
 ```
 
-### Two (2) Dimensional Table
+### Two Dimensional Tables
 
 Tables can contain other tables, creating multi-dimensional structures.
 
