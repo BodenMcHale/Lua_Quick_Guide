@@ -262,11 +262,11 @@ print("Bread Tax = " .. breadTax)
 print("Milk Tax = " .. milkTax)
 
 -- Function with multiple parameters
-function displayInfo(name, age, country)
-  print(name .. " is " .. age .. " years old and is from " .. country)
+function displayInfo(name, age, origin)
+  print(name .. " is " .. age .. " years old and is from " .. origin)
 end
 
-displayInfo("Billy", 12, "Jupiter") -- Output: Billy is 12 years old and is from Jupiter
+displayInfo("Ed", 12, "Peachcreek") -- Output: Ed is 12 years old and is from Peachcreek
 ```
 
 ## Scope
@@ -288,9 +288,6 @@ if isAlive then
 end
 
 print(a) -- Output: nil (a is not accessible outside the if block)
-
--- Global variable example
-
 ```
 
 ### Global Variables
@@ -306,22 +303,20 @@ Loops are used to repeat a block of code multiple times.
 ```lua
 -- While loop
 local index = 0
-local count = 0
 
 while index <= 10 do
-  count = count + 1
-  index = index + 1 -- This line was missing in the original code
+  index = index + 1
 end
 
-print("count is " .. count) -- Output: count is 11
+print("The current index is " .. index) -- Output: The current index is 11
 
 -- For loop
-count = 0
+local count = 0
 
 for index = 1, 5 do
   count = count + 1
 end
-print("count is " .. count) -- Output: count is 5
+print("The total count is " .. count -- Output: The total count is 5
 ```
 
 ### Infinite Loops
@@ -331,11 +326,11 @@ An infinite loop continues indefinitely unless explicitly broken (use with cauti
 ```lua
 local index = 0
 
+-- This loop will run forever, printing increasing numbers
 while index >= 0 do
  index = index + 1
  print(index)
 end
--- This loop will run forever, printing increasing numbers
 ```
 
 ### Nested Loops
