@@ -3,10 +3,10 @@
 Please refer to my video: [Lua Crash Course - A quick overview with a guide](https://www.youtube.com/watch?v=Q10xtMnDHaI)
 
 ## Table of Contents
-- [Lua - Quick Guide](#Lua-5-3---quick-guide)}
-
-- [Print Statements](##print-statements)
-
+- [Lua - Quick Guide](#Lua-5-3---quick-guide)
+  -[ToC](#table-of-contents)
+  - [Print Statements](##print-statements)
+  - [Variables](#variables)
 ## Print Statements
 
 Print statements are used to output text or values to the console. They are essential for debugging and displaying information to the developer.
