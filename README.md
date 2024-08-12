@@ -56,7 +56,7 @@ Variables are containers for storing data values. In Lua, variables can hold dif
 ```lua
 -- Types
 local pizzas_to_order = 10 -- Number: Stores numeric values
-local first_name = "Boden" -- String: Stores text
+local first_name = "Ed" -- String: Stores text
 local is_alive = false -- Boolean: Stores true or false
 local empty_variable = nil -- Nil: Represents no value or invalid value
 ```
@@ -107,8 +107,8 @@ Strings are sequences of characters used to represent text. Lua provides operati
 ```lua
 -- Concatenate strings using the .. operator
 local phrase = "My name is "
-local name = "Boden"
-print(phrase .. name) -- Output: "My name is Boden"
+local name = "Eddy"
+print(phrase .. name) -- Output: "My name is Eddy"
 
 -- Combining strings with numbers
 local amount_of_creatures = 21
@@ -133,7 +133,7 @@ print(is_conscious) -- Output: false
 Conditional statements allow the program to make decisions based on certain conditions.
 
 ```lua
--- Number comparisons
+-- Variable assignment
 local age = 16
 
 -- if statement for comparison
@@ -141,7 +141,7 @@ if age < 18 then
   print("The age is under 18")
 end
 
--- elseif and else comparisons
+-- elseif and else for comparisons
 if age > 18 then
   print("The age is over 18")
 elseif age == 18 then
@@ -164,19 +164,19 @@ Comparison operators are used to compare values.
 
 ```lua
 -- Boolean comparison
-local isAlive = true
+local is_alive = true
 
-if isAlive then
-    print("dog")
+if is_alive then
+    print("The dog lives!")
 end
 
 -- String comparisons
-local name = "billy"
+local name = "Edd"
 
-if name == "Billy" then -- This condition is false
-  print("Billy")
-elseif name == "billy" then -- This condition is true
-  print("billy")
+if name == "Edd" then -- This condition is false
+  print("Edd")
+elseif name ~= "Edd" then -- This condition is true
+  print("I'd swear, but standards won't let me")
 end
 ```
 
@@ -363,11 +363,13 @@ Tables are the primary data structure in Lua. They can be used to create arrays,
 -- Basic table (array-like)
 local colors = { "red", "green", "blue" }
 
+-- Tables start with index one, not with index zero as in C
 print(colors[1]) -- Output: red
 print(colors[2]) -- Output: green
 print(colors[3]) -- Output: blue
 
 -- Using a loop to iterate through your table
+-- "#" returns the length of the table
 for index = 1, #colors do
   print(colors[index])
 end
@@ -410,13 +412,16 @@ Tables can contain other tables, creating multi-dimensional structures.
 ```lua
 -- Tables within tables
 local data = {
-  { "billy", 12 },
-  { "john", 20 },
-  { "andy", 65 }
+  {"Lee", 15},
+  {"Marie" 13},
+  {"May", 12}
 }
 
 for index = 1, #data do
-  print(data[index][1] .. " is " .. data[index][2] .. " years old")
+  print(data[index][1] .. " is " .. data[index][2] .. " years old") 
+  -- Output: Lee is 15 years old,
+  -- Output: Marie is 13 years old,
+  -- Output: May is 12 years old
 end
 ```
 
