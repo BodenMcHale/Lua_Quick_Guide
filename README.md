@@ -4,7 +4,7 @@ Please refer to my video: [Lua Crash Course - A quick overview with a guide](htt
 
 ## Print Statements
 
-Print statements are used to output text or values to the console. They are essential for debugging and displaying information to the user.
+Print statements are used to output text or values to the console. They are essential for debugging and displaying information to the developer.
 
 ```lua
 print("Hello, developer")
@@ -12,13 +12,13 @@ print("Hello, developer")
 
 ## Comments
 
-Comments are used to add explanations or notes within the code. They are ignored by the Lua interpreter and are solely for the benefit of programmers reading the code.
+Comments are used to add explanations or notes within the code. They are ignored by the Lua interpreter and are solely for the benefit of developers reading the code.
 
 ```lua
 -- This is an example of a comment in Lua
 print("Hello, developer") -- An inline comment
 -- The following line of code will not be executed due to it being commented out
---print("Hello, World") -- A comment still functions the same when you comment out the line of code it's on
+--print("Hello, World")
 ```
 
 ## Variables
