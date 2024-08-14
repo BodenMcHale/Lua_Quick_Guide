@@ -316,7 +316,7 @@ local count = 0
 for index = 1, 5 do
   count = count + 1
 end
-print("The total count is " .. count -- Output: The total count is 5
+print("The total count is " .. count) -- Output: The total count is 5
 ```
 
 ### Infinite Loops
