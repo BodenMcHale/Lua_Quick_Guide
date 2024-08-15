@@ -330,6 +330,10 @@ local index = 0
 while index >= 0 do
  index = index + 1
  print(index)
+ -- Output: 1
+ -- Output: 2
+ -- Output: 3
+ -- Output: ...
 end
 ```
 
@@ -352,7 +356,7 @@ print(count) -- Output: 100
 
 ## Tables
 
-Tables are the primary data structure in Lua. They can be used to create arrays, dictionaries, and more complex data structures.
+Tables are the primary data structure in Lua, these can be used to create more complex data structures.
 
 ```lua
 -- Basic table (array-like)
