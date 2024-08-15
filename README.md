@@ -76,28 +76,45 @@ Numbers in Lua can be integers or floating-point values. Lua supports various ar
 local a = 1
 local b = 2
 local c = a + b
-print(c) -- Output: 3
+print(c)
+-- Output: 3
 
 local d = b - a
-print(d) -- Output: 1
+print(d)
+-- Output: 1
 
 local e = 1 * 3 * 4
-print(e) -- Output: 12
+print(e)
+-- Output: 12
 
 local f = (1+3) * 2
-print(f) -- Output: 8
+print(f)
+-- Output: 8
+```
 
-print(10//2) -- Output: 5 (integer division)
-print(10/2) -- Output: 5.0 (float division)
-print(2^2) -- Output: 4 (exponentiation)
-print(5%2) -- Output: 1 (modulus)
+```lua
+print(10//2)
+-- Output: 5 (integer division)
 
-print(-b) -- Output: -2 (negation)
+print(10/2)
+-- Output: 5.0 (float division)
 
+print(2^2) 
+-- Output: 4 (exponentiation)
+
+print(5%2) 
+-- Output: 1 (modulus)
+
+print(-b) 
+-- Output: -2 (negation)
+```
+
+```lua
 -- Incrementing
 local level = 1
 level = level + 1
-print(level) -- Output: 2
+print(level)
+-- Output: 2
 ```
 
 ### Strings
@@ -108,12 +125,14 @@ Strings are sequences of characters used to represent text. Lua provides operati
 -- Concatenate strings using the .. operator
 local phrase = "My name is "
 local name = "Eddy"
-print(phrase .. name) -- Output: "My name is Eddy"
+print(phrase .. name)
+-- Output: "My name is Eddy"
 
 -- Combining strings with numbers
 local amount_of_creatures = 21
 local creature = "toads"
-print("There are " .. amount_of_creatures .. " " .. creature .. " in the swamp") -- Output: "There are 21 toads in the swamp"
+print("There are " .. amount_of_creatures .. " " .. creature .. " in the swamp")
+-- Output: "There are 21 toads in the swamp"
 ````
 
 ### Boolean
@@ -122,10 +141,12 @@ Boolean values represent true or false conditions. They are used in logical oper
 
 ```lua
 local is_conscious = true
-print(is_conscious) -- Output: true
+print(is_conscious)
+-- Output: true
 
 is_conscious = false
-print(is_conscious) -- Output: false
+print(is_conscious)
+-- Output: false
 ```
 
 ## Conditional Statements
@@ -169,7 +190,9 @@ local is_alive = true
 if is_alive then
     print("The dog lives!")
 end
+```
 
+```lua
 -- String comparisons
 local name = "Edd"
 
@@ -188,11 +211,11 @@ Logical operators can be used to combine multiple conditions.
 local x = 10
 
 if x == 10 and x < 0 then -- Both conditions must be true (which they aren't)
-  print("dog")
-elseif x == 100 or x < 0 then -- At least one condition must be true
-  print("cat")
+  print("Dog")
+elseif x == 100 or x > 0 then -- At least one condition must be true
+  print("Cat")
 end
--- Result: No output, as neither condition is true
+-- Output: Cat
 ```
 
 ### Nested statements
@@ -200,17 +223,17 @@ end
 Conditional statements can be nested within each other.
 
 ```lua
-local x = 10
+local animal = "Dog"
 local isAlive = true
 
-if x == 10 then
+if animal == "Dog" then
   if isAlive == true then
-    print("dog")
+    print("The dog is alive! :)")
   else
-    print("cat")
+    print("The dog is dead! :(")
   end
 end
--- Output: "dog"
+-- Output: "The dog is alive! :)"
 ```
 
 ### Invert Values
@@ -220,14 +243,13 @@ The **not** keyword can be used to invert a boolean value:
 ```lua
 local x = 10
 
-if not (x == 10) then -- This is equivalent to x ~= 10
+if not (x == 10) then -- This is equivalent to "x ~= 10"
   print("here")
 end
 
-if x ~= 10 then -- This is equivalent to x ~= 10
+if x ~= 10 then -- This is equivalent to "not (x = 10)"
   print("here")
 end
--- No output, as the condition is false
 ```
 
 ## Functions
@@ -238,35 +260,44 @@ Functions are reusable blocks of code that perform specific tasks.
 -- Function to calculate and print tax
 function printTax(price)
   local tax = price * 0.21
-  print("tax:" .. tax)
+  print("The tax is $" .. tax)
 end
 
-printTax(200) -- Output: tax:42
+printTax(200) 
+-- Output: The tax is $42
+```
 
+```lua
 -- Function that returns a value
 function calculateTax(price)
   return price * 0.21
 end
 
 local result = calculateTax(100)
-print(result) -- Output: 21
+print(result) 
+-- Output: 21
 
 -- Reusing the function with variables
 local bread = 130
 local milk = 110
 
-local breadTax = calculateTax(bread) -- 27.3
-local milkTax = calculateTax(milk) -- 23.1
+local breadTax = calculateTax(bread)
+-- Output: 27.3
+local milkTax = calculateTax(milk) 
+-- Output: 23.1
 
 print("Bread Tax = " .. breadTax)
 print("Milk Tax = " .. milkTax)
+```
 
+```lua
 -- Function with multiple parameters
 function displayInfo(name, age, origin)
   print(name .. " is " .. age .. " years old and is from " .. origin)
 end
 
-displayInfo("Ed", 12, "Peachcreek") -- Output: Ed is 12 years old and is from Peachcreek
+displayInfo("Ed", 12, "Peachcreek")
+-- Output: Ed is 12 years old and is from Peachcreek
 ```
 
 ## Scope
@@ -280,7 +311,9 @@ function foo()
 end
 
 print(a) -- Output: nil (a is not accessible outside the function)
+```
 
+```lua
 -- Block scope example
 local isAlive = true
 if isAlive then
@@ -292,8 +325,10 @@ print(a) -- Output: nil (a is not accessible outside the if block)
 
 ### Global Variables
 
+Be careful using global variables as they can cause errors which are hard to trace.
+
 ```lua
-myValue = 69 -- This creates a global variable
+myValue = 69 -- No local declaration will create a global
 ```
 
 ## Loops
@@ -308,15 +343,20 @@ while index <= 10 do
   index = index + 1
 end
 
-print("The current index is " .. index) -- Output: The current index is 11
+print("The current index is " .. index)
+-- Output: The current index is 11
+```
 
+```lua
 -- For loop
 local count = 0
 
 for index = 1, 5 do
   count = count + 1
 end
-print("The total count is " .. count) -- Output: The total count is 5
+
+print("The total count is " .. count)
+-- Output: The total count is 5
 ```
 
 ### Infinite Loops
@@ -350,7 +390,8 @@ for index_one = 1, 10 do
   end
 end
 
-print(count) -- Output: 100
+print(count)
+-- Output: 100
 ```
 
 
@@ -379,28 +420,35 @@ end
 -- Insert at the end of the table
 local colors = { "red", "green", "blue" }
 
-table.insert(colors, "orange")
+table.insert(colors, "yellow")
 
 local index = #colors -- 4 (this is the last index in the table)
 
-print(colors[index]) -- Output: orange
+print(colors[index])
+-- Output: yellow
+```
 
+```lua
 -- Insert at a specific index
 local colors = { "red", "green", "blue" }
 
-table.insert(colors, 2, "pink")
+table.insert(colors, 2, "grey")
 
 for index = 1, #colors do
-  print(colors[index]) -- Output: red, pink, green, blue
+  print(colors[index])
+  -- Output: red, grey, green, blue
 end
+```
 
+```lua
 -- Remove from a specific index
 local colors = { "red", "green", "blue" }
 
 table.remove(colors, 1)
 
 for index = 1, #colors do
-  print(colors[index]) -- Output: green, blue
+  print(colors[index])
+  -- Output: green, blue
 end
 ```
 
@@ -435,7 +483,8 @@ local teams = {
     ["team_b"] = 15
 }
 
-print(teams["team_a"]) -- Output: 12
+print(teams["team_a"])
+-- Output: 12
 
 for key, value in pairs(teams) do
   print(key .. ":" .. value)
@@ -470,7 +519,8 @@ for key, value in pairs(scores) do
   total = total + value
 end
 
-print("Total score of all teams:" .. total) -- Output: 27
+print("Total score of all teams:" .. total)
+-- Output: 27
 ```
 
 
@@ -483,24 +533,30 @@ Lua provides a math library with various mathematical functions.
 ```lua
 -- Absolute value
 local x = -10
-print(math.abs(x)) -- Output: 10
+print(math.abs(x))
+-- Output: 10
 
 -- Ceiling (round up)
 local x = 1.2
-print(math.ceil(x)) -- Output: 2
+print(math.ceil(x))
+-- Output: 2
 
 -- Convert radians to degrees
-print(math.deg(math.pi)) -- Output: 180
+print(math.deg(math.pi))
+-- Output: 180
 
 -- Floor (round down)
 local x = 1.2
-print(math.floor(x)) -- Output: 1
+print(math.floor(x))
+-- Output: 1
 
 -- Pi constant
-print(math.pi) -- Output: 3.1415926535898
+print(math.pi)
+-- Output: 3.14159...
 
 -- Convert degrees to radians
-print(math.rad(180)) -- Output: 3.1415926535898
+print(math.rad(180))
+-- Output: 3.14159...
 
 -- Random number generation
 print(math.random()) -- Random value between 0 and 1
@@ -508,7 +564,8 @@ print(math.random(100)) -- Random integer from 1 to 100
 print(math.random(20, 100)) -- Random integer from 20 to 100
 
 -- Square root
-print(math.sqrt(100)) -- Output: 10
+print(math.sqrt(100))
+-- Output: 10
 ```
 
 ## Modules
