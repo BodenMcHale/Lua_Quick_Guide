@@ -293,7 +293,7 @@ print(a) -- Output: nil (a is not accessible outside the if block)
 ### Global Variables
 
 ```lua
-_G.myValue = 69 -- This creates a global variable
+myValue = 69 -- This creates a global variable
 ```
 
 ## Loops
@@ -466,7 +466,7 @@ for key, value in pairs(scores) do
   total = total + value
 end
 
-print("Total score of all teams:" .. total)
+print("Total score of all teams:" .. total) -- Output: 27
 ```
 
 
